@@ -14,10 +14,10 @@ var https = require('https')
 
 options = {
   key: fs.readFileSync(path.join(certsPath, 'my-server.key.pem'))
-, ca: [ fs.readFileSync(path.join(caCertsPath, 'my-root-ca.crt.pem'))]
+, ca: [ fs.readFileSync(path.join(caCertsPath, 'my-root-ca.crt.pem')) ]
 , cert: fs.readFileSync(path.join(certsPath, 'my-server.crt.pem'))
 , requestCert: false
-, rejectUnauthorized: true
+, rejectUnauthorized: false
 };
 
 server = https.createServer(options);
