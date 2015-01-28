@@ -1,0 +1,44 @@
+{
+  "name": "https-ssl-example",
+  "version": "1.0.0",
+  "description": "zero-config HTTPS server example (complete with bogus TLS/SSL 2048-bit RSA PEM certs)",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coolaj86/nodejs-ssl-example.git"
+  },
+  "keywords": [
+    "ssl",
+    "tls",
+    "https",
+    "rsa",
+    "pem",
+    "example",
+    "demo",
+    "test",
+    "openssl",
+    "crt",
+    "p12",
+    "csr",
+    "certificate",
+    "certs",
+    "cert",
+    "key",
+    "private",
+    "public"
+  ],
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com/)",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/coolaj86/nodejs-ssl-example/issues"
+  },
+  "homepage": "https://github.com/coolaj86/nodejs-ssl-example",
+  "dependencies": {
+    "bluebird": "^2.9.3",
+    "check-ip-address": "^1.0.0",
+    "request": "^2.51.0"
+  }
+}
