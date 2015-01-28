@@ -22,6 +22,9 @@ options = {
 
 server = https.createServer(options);
 checkip.getExternalIp().then(function (ip) {
+  var host = ip || 'local.helloworld3000.com'
+    ;
+
   function listen(app) {
     server.on('request', app);
     server.listen(port, function () {
@@ -34,6 +37,6 @@ checkip.getExternalIp().then(function (ip) {
     });
   }
 
-  var app = require('./app').create(server, ip || 'local.helloworld3000.com', port);
+  var app = require('./app').create(server, host, port);
   listen(app);
 });
