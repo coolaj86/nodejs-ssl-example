@@ -39,6 +39,33 @@ Full Article
 See the full article at
 [How to create a Certificate Signing Request (CSR) for HTTPS (TLS/SSL) RSA PEMs](http://blog.coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
 
+SSL Warnings
+============
+
+This example uses **dummy SSL certificates** that are not recognized
+by your browser.
+
+There's nothing wrong with the example.
+**The browser security warnings are normal**.
+It's simply your browser letting
+you know that these certificates are not from a recognized vendor.
+
+![](https://i.imgur.com/d5mXvGa.png)
+
+![](https://i.imgur.com/RDjfEE5.png)
+
+![](https://i.imgur.com/xRnNSDQ.png)
+
+**When you deploy your real app** you should swap them with your own certificates.
+
+**TODO**: Link to video showing how to generate CSR, etc.
+
+**TODO**: During Summer 2015 Mozilla will make basic SSL certificates available
+to all web hosts for free be (see [Let's Encrypt](https://letsencrypt.org/)).
+Someone remind me to come back and update the instructions for the
+free certificates if this notice is still here in August.
+
+
 Other SSL Resources
 =========
 
