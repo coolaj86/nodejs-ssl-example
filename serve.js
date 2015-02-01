@@ -2,11 +2,14 @@
 'use strict';
 
 var https = require('https')
+  , http = require('http')
   , port = process.argv[2] || 8043
+  , insecurePort = process.argv[3] || 4080
   , fs = require('fs')
   , path = require('path')
   , checkip = require('check-ip-address')
   , server
+  , insecureServer
   , options
   , certsPath = path.join(__dirname, 'certs', 'server')
   , caCertsPath = path.join(__dirname, 'certs', 'ca')
@@ -39,4 +42,19 @@ checkip.getExternalIp().then(function (ip) {
 
   var app = require('./app').create(server, host, port);
   listen(app);
+});
+
+// This simply redirects from the current location to the encrypted location
+insecureServer = http.createServer();
+insecureServer.on('request', function (req, res) {
+  // TODO also redirect websocket upgrades
+  res.setHeader(
+    'Location'
+  , 'https://' + req.headers.host.replace(/:\d+/, ':' + port) + req.url
+  );
+  res.statusCode = 302;
+  res.end();
+});
+insecureServer.listen(insecurePort, function(){
+  console.log("\nRedirecting all http traffic to https\n");
 });
