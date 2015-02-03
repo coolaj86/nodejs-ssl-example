@@ -3,6 +3,7 @@
 
 var https = require('https')
   , http = require('http')
+  , path = require('path')
   , port = process.argv[2] || 8043
   , insecurePort = process.argv[3] || 4080
   , fs = require('fs')
@@ -15,6 +16,10 @@ var https = require('https')
   , caCertsPath = path.join(__dirname, 'certs', 'ca')
   ;
 
+
+//
+// SSL Certificates
+//
 options = {
   key: fs.readFileSync(path.join(certsPath, 'my-server.key.pem'))
 , ca: [ fs.readFileSync(path.join(caCertsPath, 'my-root-ca.crt.pem')) ]
@@ -23,6 +28,10 @@ options = {
 , rejectUnauthorized: false
 };
 
+
+//
+// Serve an Express App securely with HTTPS
+//
 server = https.createServer(options);
 checkip.getExternalIp().then(function (ip) {
   var host = ip || 'local.helloworld3000.com'
@@ -40,11 +49,17 @@ checkip.getExternalIp().then(function (ip) {
     });
   }
 
-  var app = require('./app').create(server, host, port);
+  var publicDir = path.join(__dirname, 'public');
+  var app = require('./app').create(server, host, port, publicDir);
   listen(app);
 });
 
-// This simply redirects from the current location to the encrypted location
+
+//
+// Redirect HTTP ot HTTPS
+//
+// This simply redirects from the current insecure location to the encrypted location
+//
 insecureServer = http.createServer();
 insecureServer.on('request', function (req, res) {
   // TODO also redirect websocket upgrades
