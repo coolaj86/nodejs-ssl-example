@@ -11,7 +11,10 @@ ScreenCast
 See <https://youtu.be/r92gqYHJc5c>
 
 
-Here's the zero-config example:
+Zero-Config Example
+========
+
+Clone and run - it's that easy.
 
 1. Clone the Example
 ------------
