@@ -46,13 +46,14 @@ certificate authority. That's okay for the purposes of this example.
 Special Notes
 ----
 
-The key to this example is that **the certs are not self-signed**.
-Using self-signed certs is the stupidest thing that anyone ever tried to do in a browser.
+The key to this example is that the certs are not self-signed **root** certificates.
+Using self-signed root certs is the stupidest thing that anyone ever tried to do in a browser.
 
-Instead, a bogus Root CA is created. Then the bogus Root CA is used to sign the certificates.
+Instead, the self-signed **Root CA** is used to sign the certificate that the browser / other
+http client will use. That's why this example works where others fail. It doesn't violate the rules for Root certs.
 
 If only the world knew that all you have to do to fix Self-Signed Certificate errors
-is to create one additional certificate and use that as the Certificate Authority...
+is to create one additional certificate and serve that instead of the root...
 
 Full Article
 -----
