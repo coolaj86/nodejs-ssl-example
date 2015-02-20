@@ -10,6 +10,9 @@ ScreenCast
 
 See <https://youtu.be/r92gqYHJc5c>
 
+See the full article at
+[How to create a Certificate Signing Request (CSR) for HTTPS (TLS/SSL) RSA PEMs](http://blog.coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
+
 
 Zero-Config Example
 ========
