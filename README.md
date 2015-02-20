@@ -81,9 +81,7 @@ you know that these certificates are not from a recognized vendor.
 
 ![](https://i.imgur.com/xRnNSDQ.png)
 
-**When you deploy your real app** you should swap them with your own certificates.
-
-**TODO**: Link to video showing how to generate CSR, etc.
+**If you deploy your "real" app publicly** you should swap them with your own certificates.
 
 **TODO**: During Summer 2015 Mozilla will make basic SSL certificates available
 to all web hosts for free be (see [Let's Encrypt](https://letsencrypt.org/)).
