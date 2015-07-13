@@ -15,6 +15,7 @@ openssl genrsa \
 openssl req \
   -x509 \
   -new \
+  -sha256 \
   -nodes \
   -key certs/ca/my-root-ca.key.pem \
   -days 3652 \

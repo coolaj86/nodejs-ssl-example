@@ -5,6 +5,7 @@ set -e
 # Sign the request from Device with your Root CA
 openssl x509 \
   -req -in certs/tmp/my-server.csr.pem \
+  -sha256 \
   -CA certs/ca/my-root-ca.crt.pem \
   -CAkey certs/ca/my-root-ca.key.pem \
   -CAcreateserial \
