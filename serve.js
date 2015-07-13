@@ -1,21 +1,19 @@
 #!/usr/bin/env node
 'use strict';
 
-var https = require('https')
-  , http = require('http')
-  , path = require('path')
-  , port = process.argv[2] || 8043
-  , insecurePort = process.argv[3] || 4080
-  , fs = require('fs')
-  , path = require('path')
-  , checkip = require('check-ip-address')
-  , server
-  , insecureServer
-  , options
-  , certsPath = path.join(__dirname, 'certs', 'server')
-  , caCertsPath = path.join(__dirname, 'certs', 'ca')
-  ;
-
+var https = require('https');
+var http = require('http');
+var path = require('path');
+var port = process.argv[2] || 8043;
+var insecurePort = process.argv[3] || 4080;
+var fs = require('fs');
+var path = require('path');
+var checkip = require('check-ip-address');
+var server;
+var insecureServer;
+var options;
+var certsPath = path.join(__dirname, 'certs', 'server');
+var caCertsPath = path.join(__dirname, 'certs', 'ca');
 
 //
 // SSL Certificates
@@ -25,7 +23,7 @@ options = {
 , ca: [ fs.readFileSync(path.join(caCertsPath, 'my-root-ca.crt.pem')) ]
 , cert: fs.readFileSync(path.join(certsPath, 'my-server.crt.pem'))
 , requestCert: false
-, rejectUnauthorized: false
+, rejectUnauthorized: true
 };
 
 
@@ -34,8 +32,8 @@ options = {
 //
 server = https.createServer(options);
 checkip.getExternalIp().then(function (ip) {
-  var host = ip || 'local.helloworld3000.com'
-    ;
+  var ip = '';
+  var host = ip || 'local.helloworld3000.com';
 
   function listen(app) {
     server.on('request', app);
