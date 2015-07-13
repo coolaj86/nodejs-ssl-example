@@ -20,8 +20,11 @@ var caCertsPath = path.join(__dirname, 'certs', 'ca');
 //
 options = {
   key: fs.readFileSync(path.join(certsPath, 'my-server.key.pem'))
-, ca: [ fs.readFileSync(path.join(caCertsPath, 'my-root-ca.crt.pem')) ]
+  // This certificate should be a bundle containing your server certificate and any intermediates
+  // cat certs/cert.pem certs/chain.pem > certs/server-bundle.pem
 , cert: fs.readFileSync(path.join(certsPath, 'my-server.crt.pem'))
+  // ca only needs to be specified for peer-certificates
+//, ca: [ fs.readFileSync(path.join(caCertsPath, 'my-root-ca.crt.pem')) ]
 , requestCert: false
 , rejectUnauthorized: true
 };
