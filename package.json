@@ -38,8 +38,9 @@
   "homepage": "https://github.com/coolaj86/nodejs-ssl-example",
   "dependencies": {
     "bluebird": "^2.9.3",
-    "check-ip-address": "^1.0.0",
+    "check-ip-address": "^1.1.1",
     "express": "^4.11.2",
-    "request": "^2.51.0"
+    "request": "^2.51.0",
+    "ssl-root-cas": "^1.1.10"
   }
 }
