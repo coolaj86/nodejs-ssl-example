@@ -1,6 +1,6 @@
 {
   "name": "https-ssl-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "zero-config HTTPS server example (complete with bogus TLS/SSL 2048-bit RSA PEM certs)",
   "main": "serve.js",
   "scripts": {
