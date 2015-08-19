@@ -7,7 +7,6 @@ var path = require('path');
 var port = process.argv[2] || 8043;
 var insecurePort = process.argv[3] || 4080;
 var fs = require('fs');
-var path = require('path');
 var checkip = require('check-ip-address');
 var server;
 var insecureServer;
