@@ -4,7 +4,8 @@
   "description": "zero-config HTTPS server example (complete with bogus TLS/SSL 2048-bit RSA PEM certs)",
   "main": "serve.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node serve.js"
   },
   "repository": {
     "type": "git",
