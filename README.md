@@ -36,7 +36,7 @@ node ./serve.js 8043 4080
 
 Then visit <https://local.helloworld3000.com:8043>.
 
-Note that <https://local.helloworld3000.com:4080> will **redirect to https**.
+Note that <http://local.helloworld3000.com:4080> will **redirect to https**.
 
 **Note**: This points to **your localhost** but since it's very difficult to
 develop, especially with HTTPS, with `127.0.0.1`, `localhost`, or `file://`,
