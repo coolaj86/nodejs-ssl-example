@@ -11,7 +11,7 @@ ScreenCast
 See <https://youtu.be/r92gqYHJc5c>
 
 See the full article at
-[How to create a Certificate Signing Request (CSR) for HTTPS (TLS/SSL) RSA PEMs](http://blog.coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
+[How to create a Certificate Signing Request (CSR) for HTTPS (TLS/SSL) RSA PEMs](https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
 
 
 Zero-Config Example
@@ -62,7 +62,7 @@ Full Article
 -----
 
 See the full article at
-[How to create a Certificate Signing Request (CSR) for HTTPS (TLS/SSL) RSA PEMs](http://blog.coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
+[How to create a Certificate Signing Request (CSR) for HTTPS (TLS/SSL) RSA PEMs](https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
 
 SSL Warnings
 ============
@@ -104,5 +104,5 @@ Articles
 
 * [http://greengeckodesign.com/blog/2013/06/15/creating-an-ssl-certificate-for-node-dot-js/](Creating an SSL Certificate for node.js)
 * [http://www.hacksparrow.com/express-js-https-server-client-example.html/comment-page-1](HTTPS Trusted Peer Example)
-* [How to Create a CSR for HTTPS SSL (demo with name.com, node.js)](http://blog.coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
+* [How to Create a CSR for HTTPS SSL (demo with name.com, node.js)](https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
 * [coolaj86/Painless-Self-Signed-Certificates-in-node](https://github.com/coolaj86/node-ssl-root-cas/wiki/Painless-Self-Signed-Certificates-in-node.js)
