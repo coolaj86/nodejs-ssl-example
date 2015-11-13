@@ -34,7 +34,6 @@ options = {
 //
 server = https.createServer(options);
 checkip.getExternalIp().then(function (ip) {
-  var ip = '';
   var host = ip || 'local.helloworld3000.com';
 
   function listen(app) {
