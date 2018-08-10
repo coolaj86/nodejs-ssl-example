@@ -1,3 +1,10 @@
+Update: Just use Greenlock
+======
+
+[Greenlock for Express.js](https://git.coolaj86.com/coolaj86/greenlock-express.js) - <https://git.coolaj86.com/coolaj86/greenlock-express.js>
+<small>Certificates issued via Let's Encrypt</small>
+
+
 HTTPS 2048-bit RSA TLS/SSL Cert Example
 ====
 
